@@ -5,7 +5,9 @@ const path = require('path');
 const logger = require('./middleware/logger');
 
 //Body Parser Middleware
-// display Body Parser
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 
 // app.use(logger);
 app.use(express.static(path.join(__dirname, 'public')));
