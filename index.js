@@ -7,7 +7,8 @@ const members = require('./Members');
 //Express middleware: whenever receives a request, we gain access for res, req
 //put middleware function before a request send
 const logger = (req, res, next) => {
-    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}}`);
+    console.log('Date://', Date.now());
     next();
 }
 app.use(logger);
