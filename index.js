@@ -14,7 +14,7 @@ app.get('/api/members/:id', (req, res) => {
     if (found) { 
          res.json(members.filter(member => member.id === parseInt(req.params.id)));
     } else {
-        res.status(404).json( {msg: `not found ${req.params.id} `})
+        res.status(404).json( {msg: `not found member id: ${req.params.id} `})
     }
 })
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`) );
