@@ -3,12 +3,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const path = require('path');
 const members = require('./Members');
+const moment = require('moment');
+const momentApp = moment();
 
-//Express middleware: whenever receives a request, we gain access for res, req
-//put middleware function before a request send
+//moment is getting date. .format() will format date 
 const logger = (req, res, next) => {
-    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}}`);
-    console.log('Date://', Date.now());
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}}
+    ${momentApp.format()}`);
     next();
 }
 app.use(logger);
