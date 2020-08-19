@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const members = require('../../Members')
-
+//Get All members
 router.get('/api/members', (req,res) => {res.json(members);});
 //Get Single Member if not found
 router.get('/api/members/:id', (req, res) => {
