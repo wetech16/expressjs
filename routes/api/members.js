@@ -13,4 +13,10 @@ router.get('/:id', (req, res) => {
     }
 })
 
+//Create member Go to Postman to create a object we can see nothing in response
+//it's because no body parser setup to encode json
+router.post('/', (req, res) => {
+    res.send(req.body);
+});
+
 module.exports = router;

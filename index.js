@@ -4,6 +4,9 @@ const PORT = process.env.PORT || 5000;
 const path = require('path');
 const logger = require('./middleware/logger');
 
+//Body Parser Middleware
+// display Body Parser
+
 // app.use(logger);
 app.use(express.static(path.join(__dirname, 'public')));
 // 2nd way module export of route get json 
