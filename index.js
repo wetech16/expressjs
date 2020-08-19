@@ -8,7 +8,7 @@ const logger = require('./middleware/logger')
 app.use(logger);
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/api/members', (req,res) => {res.json(members);});
-//Get Single Member
+//Get Single Member if not found
 app.get('/api/members/:id', (req, res) => {
     const found = members.some(member => member.id === parseInt(req.params.id));
     if (found) { 
